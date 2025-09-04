@@ -19,10 +19,10 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "O nome do produto não pode estar vazio")
+    @NotBlank(message = "Name can't be empty")
     @Column(nullable = false, length = 100)
     private String name;
 
-    @Positive(message = "O preço deve ser maior que zero")
+    @Positive(message = "Price needs to be bigger than zero")
     private double price;
 }

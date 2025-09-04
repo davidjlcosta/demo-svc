@@ -28,13 +28,13 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product get(Long id) {
 
-        return productRepository.findById(id).orElseThrow(() -> new RuntimeException("Produto não encontrado"));
+        return productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
     }
 
     @Override
     public Product update(Long id, Product productDetails) {
 
-        Product product = productRepository.findById(id).orElseThrow(() -> new RuntimeException("Produto não encontrado"));
+        Product product = productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
 
         product.setName(productDetails.getName());
         product.setPrice(productDetails.getPrice());
